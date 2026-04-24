@@ -1,4 +1,274 @@
-.golden-img {
-    max-width: 50%;
-    height: auto;
+/* General Page Styling */
+body {
+  background-color: #E6E6FA; /* lavender background */
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: #333333; /* deep charcoal for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Centered Content Container */
+.container {
+  max-width: 600px;          /* keeps content between 600–800px */
+  width: 90%;                /* responsive fallback for small screens */
+  margin: 20px auto;         /* centers horizontally */
+  background-color: #ffffff; /* white content area */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+  text-align: center;
+  color: #4B0082; /* elegant plum for headings */
+}
+
+/* Paragraphs */
+p {
+  text-align: justify; /* rubric requires left or justified */
+  line-height: 1.6;
+}
+
+/* Navigation Menu */
+nav {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+nav a {
+  color: #2A2A72; /* navy for links */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #008080; /* teal hover effect */
+}
+
+/* Lists */
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+ul li a {
+  color: #2A2A72;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #f005b1;
+}
+nav a {
+  color: #2A2A72; /* navy for default link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:visited {
+  color: #4B0082; /* plum for visited links */
+}
+
+nav a:hover {
+  color: #008080; /* teal on hover */
+}
+
+nav a:active {
+  color: #800080; /* deep purple when clicked */
+}
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #D8BFD8; /* thistle lavender */
+  color: #2A2A72; /* navy text */
+}
+
+tr:nth-child(even) {
+  background-color: #F8F8FF; /* ghost white for alternating rows */
+}
+
+/* Forms */
+form {
+  margin: 20px auto;
+  max-width: 560px; /* keep form compact inside the main container */
+  padding: 0 10px;  /* slight inner spacing so inputs don't touch edges */
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #4B0082;
+}
+
+form input[type="text"] {
+  width: 200px; /* keeps inputs side by side */
+}
+
+/* Form layout */
+.form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  flex: 1 1 220px; /* grow, shrink, min width - smaller min for compact layout */
+  min-width: 140px;
+}
+
+.form-field.full {
+  flex: 1 1 100%; /* full-width rows take the full available width */
+}
+
+/* Labels and inputs */
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #4B0082; /* matches your plum */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Radio group styling */
+.radio-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input[type="radio"] {
+  accent-color: #4B0082; /* lavender theme accent in modern browsers */
+}
+
+/* Submit button (uses your existing palette) */
+input[type="submit"] {
+  background-color: #4B0082;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #2A2A72;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #4B0082;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4B0082; /* plum button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Keep submit button from stretching and align it to the right in its row */
+.form-row:last-of-type {
+  justify-content: flex-end;
+}
+
+.form-row:last-of-type input[type="submit"] {
+  margin: 0;
+  min-width: 120px;
+}
+
+input[type="submit"]:hover {
+  background-color: #2A2A72; /* navy hover */
+}
+
+.hero-container {
+  max-width: 770px;     /* limits how wide the image can grow */
+  margin: 0 auto 20px;   /* centers it and adds spacing below */
+  padding: 0 20px;       /* adds side padding for mobile */
+}
+
+.hero-img {
+  width: 40%;         /* scales down relative to container */
+  max-width: 400px;   /* hard cap */
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Make all images responsive to their containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* More specific hero image rule (applies if image is inside .hero) */
+.hero img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+.quote-heading {
+  font-style: italic;
+  color: #4B0082; /* your plum accent */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 20px;
 }
